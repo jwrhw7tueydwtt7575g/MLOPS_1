@@ -5,7 +5,7 @@ from flask import Flask, render_template,request
 
 app = Flask(__name__)
 
-loaded_model = joblib.load(MODEL_OUTPUT_PATH)
+loaded_model = joblib.load('artifacts\models\lgbm_model.pkl')
 @app.route('/',methods=['GET','POST'])
 def index():
     if request.method=='POST':
